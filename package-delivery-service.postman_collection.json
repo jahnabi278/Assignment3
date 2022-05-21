@@ -77,7 +77,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Fri, 20 May 2022 10:58:13 GMT"
+							"value": "Fri, 20 May 2022 12:48:39 GMT"
 						},
 						{
 							"key": "Keep-Alive",
@@ -90,6 +90,94 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"packageDeliveryCharge\": 600\n}"
+				}
+			]
+		},
+		{
+			"name": "GetPackageDeliveryAndProcessingCharge",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"jahnabisharma\",\r\n    \"userContactNumber\": 8876578897,\r\n    \"defectiveComponent\": {\r\n        \"componentType\": \"INTEGRAL\",\r\n        \"ComponentName\": \"shoes\",\r\n        \"quantity\": \"5\",\r\n        \"systemDate\": \"2022/05/20\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/GetPackageDeliveryAndProcessingCharge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"GetPackageDeliveryAndProcessingCharge"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetPackageDeliveryAndProcessingCharge",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"jahnabisharma\",\r\n    \"userContactNumber\": 8876578897,\r\n    \"defectiveComponent\": {\r\n        \"componentType\": \"INTEGRAL\",\r\n        \"ComponentName\": \"shoes\",\r\n        \"quantity\": \"5\",\r\n        \"systemDate\": \"2022/05/20\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/GetPackageDeliveryAndProcessingCharge",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"GetPackageDeliveryAndProcessingCharge"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 20 May 2022 12:55:41 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"requestId\": \"5e21946e8c6f4fbdaf0316564b504bb4\",\n    \"processingCharge\": 500,\n    \"packagingAndDeliveryCharge\": 600,\n    \"dateOfDelivery\": \"2022/05/24\"\n}"
 				}
 			]
 		}
